@@ -1,0 +1,84 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "crm-backend"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "Flask>=3.0",
+    "flask-openapi3",
+    "SQLAlchemy>=2.1",
+    "alembic",
+    "psycopg[binary]",
+    "argon2-cffi",
+    "pyotp",
+    "cryptography",
+    "Flask-Session>=0.8",
+    "redis>=5.0",
+    "python-dotenv",
+    "phonenumbers==9.0.40",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "import-linter"]
+
+[tool.setuptools.packages.find]
+include = ["app*"]
+
+[tool.pytest.ini_options]
+testpaths = ["app"]
+
+[tool.importlinter]
+root_package = "app"
+
+[[tool.importlinter.contracts]]
+name = "platform imports no domain module"
+type = "forbidden"
+source_modules = ["app.platform"]
+forbidden_modules = ["app.identity"]
+
+[[tool.importlinter.contracts]]
+name = "identity imports no compliance submodule"
+type = "forbidden"
+source_modules = ["app.identity"]
+forbidden_modules = ["app.compliance.**"]
+allow_indirect_imports = true
+
+[[tool.importlinter.contracts]]
+name = "compliance imports no identity module"
+type = "forbidden"
+source_modules = ["app.compliance"]
+forbidden_modules = ["app.identity"]
+
+[[tool.importlinter.contracts]]
+name = "platform imports no compliance module"
+type = "forbidden"
+source_modules = ["app.platform"]
+forbidden_modules = ["app.compliance"]
+
+[[tool.importlinter.contracts]]
+name = "people imports no identity or compliance submodule"
+type = "forbidden"
+source_modules = ["app.people"]
+forbidden_modules = ["app.identity.**", "app.compliance.**"]
+allow_indirect_imports = true
+
+[[tool.importlinter.contracts]]
+name = "identity imports no people module"
+type = "forbidden"
+source_modules = ["app.identity"]
+forbidden_modules = ["app.people"]
+
+[[tool.importlinter.contracts]]
+name = "compliance imports no people module"
+type = "forbidden"
+source_modules = ["app.compliance"]
+forbidden_modules = ["app.people"]
+
+[[tool.importlinter.contracts]]
+name = "platform imports no people module"
+type = "forbidden"
+source_modules = ["app.platform"]
+forbidden_modules = ["app.people"]

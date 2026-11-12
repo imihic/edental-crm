@@ -1,0 +1,6 @@
+ime;prezime;datum roğenja;telefon;e-pošta;oib;adresa;klinika;napomena
+TestFirst;TestÈLast;02.01.2000;00 1 202 555 0100;;22222222226;Testna ulica 1, Testni Ğgrad;Centar;Testna napomena
+TestĞFirst;TestŠLast;03.01.2020.;;;33333333335;;Centar;
+Testa;Testiæ;2000-07-01;+1 202 555 0101;;;Testna ulica 5;Zapad;
+Testk;Testaè;31.02.1980;12;nije-email;123;;Nepoznata;
+;;;;;;;;

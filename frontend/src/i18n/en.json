@@ -1,0 +1,422 @@
+{
+  "app": {
+    "title": "Dental CRM"
+  },
+  "common": {
+    "retry": "Retry",
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "cancel": "Cancel",
+    "save": "Save",
+    "add": "Add"
+  },
+  "roles": {
+    "receptionist": "Receptionist",
+    "dentist": "Dentist",
+    "clinic_manager": "Clinic manager"
+  },
+  "auth": {
+    "login": {
+      "title": "Sign in",
+      "email": "Email",
+      "password": "Password",
+      "submit": "Sign in"
+    },
+    "totp": {
+      "title": "Two-step verification",
+      "description": "Enter the 6-digit code from your authenticator app.",
+      "code": "Code",
+      "submit": "Confirm"
+    },
+    "chooseOrganization": {
+      "title": "Choose an organization",
+      "description": "Your account belongs to more than one organization."
+    },
+    "enroll": {
+      "title": "Set up two-step verification",
+      "description": "Scan the QR code in your authenticator app and enter the generated code.",
+      "code": "Code",
+      "submit": "Enable verification",
+      "qrLabel": "QR code for setting up two-step verification",
+      "manualEntry": "Can't scan the QR code? Enter this key manually:"
+    },
+    "validation": {
+      "emailRequired": "Email is required",
+      "emailInvalid": "Enter a valid email address",
+      "passwordRequired": "Password is required",
+      "codeInvalid": "The code must be 6 digits"
+    },
+    "errors": {
+      "invalid_credentials": "Incorrect email or password",
+      "invalid_code": "Invalid code",
+      "forbidden": "You do not have access to that organization",
+      "totp_enrollment_required": "Two-step verification must be set up",
+      "unauthenticated": "Your session has expired. Sign in again.",
+      "validation_error": "Check your input",
+      "network_error": "Network error. Check your connection.",
+      "invalid_response": "Unexpected server response",
+      "csrf_failed": "Your session has expired. Refresh the page.",
+      "totp_already_enabled": "Two-step verification is already enabled",
+      "json_required": "Invalid request. Refresh the page.",
+      "unknown": "Something went wrong"
+    }
+  },
+  "shell": {
+    "organization": "Organization",
+    "switchOrganization": "Switch organization",
+    "logout": "Log out",
+    "home": {
+      "title": "Home",
+      "clinics": "Your clinics",
+      "noClinics": "No clinics assigned"
+    }
+  },
+  "nav": {
+    "label": "Main navigation",
+    "patients": "Patients",
+    "leads": "Enquiries",
+    "imports": "Import",
+    "enquiryForm": "Enquiry form",
+    "staff": "Staff"
+  },
+  "people": {
+    "patients": {
+      "title": "Patients",
+      "new": "New patient",
+      "search": "Search patients",
+      "lookupOib": "Search by OIB",
+      "findPatient": "Find patient",
+      "oibNoMatch": "No patient has that OIB",
+      "empty": "No patients",
+      "name": "Name"
+    },
+    "fields": {
+      "firstName": "First name",
+      "lastName": "Last name",
+      "fullName": "Full name",
+      "dateOfBirth": "Date of birth",
+      "oib": "OIB",
+      "phone": "Phone",
+      "email": "Email",
+      "address": "Address",
+      "notes": "Notes",
+      "preferredLanguage": "Communication language",
+      "preferredClinic": "Preferred clinic"
+    },
+    "languages": {
+      "hr": "Croatian",
+      "en": "English"
+    },
+    "validation": {
+      "firstNameRequired": "First name is required",
+      "lastNameRequired": "Last name is required",
+      "fullNameRequired": "Full name is required",
+      "emailInvalid": "Enter a valid email address",
+      "oibInvalid": "The OIB is not valid",
+      "dateInvalid": "Enter a valid date",
+      "tooLong": "The value is too long",
+      "fieldInvalid": "The value is not valid",
+      "messageRequired": "A message is required"
+    },
+    "errors": {
+      "oib_taken": "A patient with this OIB already exists",
+      "merged": "This record has been merged into another",
+      "not_found": "Record not found",
+      "forbidden": "You do not have permission for this action",
+      "validation_error": "Check the values entered",
+      "network_error": "Network error. Check your connection.",
+      "unauthenticated": "Your session has expired. Sign in again.",
+      "possible_duplicates": "Possible duplicates found",
+      "unknown": "Something went wrong",
+      "invalid_transition": "This lead can no longer move to the selected stage. Refresh the record and try again.",
+      "invalid_merge": "These records can no longer be merged. Refresh them and try again."
+    },
+    "duplicates": {
+      "title": "Possible duplicates",
+      "description": "Records that look like this one already exist. Check them before creating a new patient.",
+      "createAnyway": "Create anyway",
+      "kind": {
+        "patient": "patient",
+        "lead": "enquiry"
+      },
+      "reasons": {
+        "oib": "Same OIB",
+        "name_and_birth_date": "Same name and date of birth",
+        "email": "Same email"
+      }
+    },
+    "detail": {
+      "back": "Back to patients",
+      "edit": "Edit",
+      "contact": "Contact details",
+      "age": "Age",
+      "showOib": "Show OIB",
+      "minor": "Minor",
+      "mergedNotice": "The record you opened was merged into this patient, so you were redirected to the kept record."
+    },
+    "guardians": {
+      "title": "Guardians",
+      "add": "Add guardian",
+      "remove": "Remove",
+      "none": "No guardians",
+      "guardianOf": "Guardian of",
+      "existingPatient": "Existing patient",
+      "newContact": "New contact",
+      "relationship": "Relationship",
+      "searchPatient": "Search for a patient",
+      "picked": "Patient selected",
+      "minorNeedsGuardian": "This patient is a minor and needs a guardian.",
+      "relationships": {
+        "parent": "Parent",
+        "legal_guardian": "Legal guardian",
+        "other": "Other"
+      }
+    },
+    "consent": {
+      "title": "Consent",
+      "marketing": "Marketing consent",
+      "record": "Record consent",
+      "decision": "Decision",
+      "grant": "Consent given",
+      "withdraw": "Consent withdrawn",
+      "source": "Source",
+      "guardian": "Guardian giving consent",
+      "guardianRequired": "Choose the guardian giving consent",
+      "granted": "Given",
+      "withdrawn": "Withdrawn",
+      "states": {
+        "granted": "Given",
+        "withdrawn": "Withdrawn",
+        "unknown": "Unknown"
+      },
+      "sources": {
+        "paper": "Paper",
+        "verbal": "Verbal",
+        "form": "Form",
+        "conversion": "Conversion",
+        "merge": "Merge"
+      }
+    },
+    "enquiries": {
+      "title": "Enquiries",
+      "add": "Log enquiry",
+      "saved": "Enquiry logged",
+      "clinic": "Clinic",
+      "source": "Source",
+      "message": "Message",
+      "preferredContactTime": "Preferred contact time",
+      "marketingConsentRequested": "Requests marketing consent",
+      "sources": {
+        "phone": "Phone",
+        "walk_in": "Walk-in",
+        "email": "Email",
+        "other": "Other",
+        "website_form": "Website form"
+      },
+      "empty": "No enquiries"
+    },
+    "leads": {
+      "title": "Leads",
+      "new": "New lead",
+      "search": "Search leads",
+      "empty": "No leads found",
+      "all": "All",
+      "allClinics": "All clinics",
+      "stage": "Stage",
+      "changeStage": "Change stage",
+      "chooseStage": "Choose a stage",
+      "back": "Back to leads",
+      "attached": "The enquiry was added to an existing patient.",
+      "openPatient": "Open patient",
+      "stages": {
+        "new": "New",
+        "contacted": "Contacted",
+        "consultation_booked": "Consultation booked",
+        "converted": "Converted",
+        "lost": "Lost"
+      }
+    },
+    "lost": {
+      "title": "Mark lead as lost",
+      "reason": "Lost reason",
+      "required": "Choose a lost reason.",
+      "choose": "Choose a reason",
+      "reasons": {
+        "price": "Price",
+        "distance": "Distance",
+        "chose_other_clinic": "Chose another clinic",
+        "no_response": "No response",
+        "not_needed": "No longer needed",
+        "other": "Other"
+      }
+    },
+    "conversion": {
+      "title": "Convert to patient",
+      "confirmDuplicate": "Convert anyway"
+    },
+    "merge": {
+      "patientTitle": "Merge with…",
+      "leadTitle": "Merge into patient…",
+      "choosePatient": "Choose a patient to compare.",
+      "kept": "Kept record",
+      "retired": "Record to merge",
+      "field": "Field",
+      "fieldFrom": "{{field}} from {{name}}",
+      "continue": "Continue",
+      "back": "Back",
+      "confirm": "Confirm merge",
+      "confirmation": "The record for {{retired}} will be merged into the patient record for {{kept}}. This cannot be undone.",
+      "noMatches": "No other patients found.",
+      "noDifferences": "The displayed field values match.",
+      "maskedOib": "Only the last four digits of each OIB are shown."
+    },
+    "imports": {
+      "title": "Patient import",
+      "file": "CSV file",
+      "preview": "Preview import",
+      "previewTitle": "Import preview",
+      "previewCounts": "Total {{total}} · Valid {{valid}} · Invalid {{invalid}} · Duplicates {{duplicate}}",
+      "ignoredColumns": "Ignored columns: {{columns}}",
+      "line": "Line",
+      "status": "Status",
+      "details": "Details",
+      "duplicateLine": "Duplicate of line {{line}} in this file",
+      "includeDuplicates": "Include duplicates",
+      "commit": "Confirm import",
+      "resultCounts": "Created {{created}} · Skipped {{skipped}}",
+      "history": "Import history",
+      "noHistory": "No imports yet.",
+      "filename": "Filename",
+      "createdAt": "Started",
+      "committedAt": "Completed",
+      "counts": "Counts",
+      "statuses": {
+        "valid": "Valid",
+        "invalid": "Invalid",
+        "duplicate": "Duplicate",
+        "previewed": "Previewed",
+        "committed": "Completed",
+        "expired": "Expired",
+        "unknown": "Unknown"
+      },
+      "rowErrors": {
+        "missing_first_name": "First name is required",
+        "missing_last_name": "Last name is required",
+        "invalid_first_name": "First name is too long",
+        "invalid_last_name": "Last name is too long",
+        "invalid_date": "Date of birth is invalid",
+        "invalid_phone": "Phone number is invalid",
+        "invalid_email": "Email address is invalid",
+        "invalid_oib": "The OIB is not valid",
+        "invalid_address": "Address is too long",
+        "invalid_notes": "Notes are too long",
+        "unknown_clinic": "Clinic not found",
+        "unknown": "This row contains an invalid value"
+      },
+      "errors": {
+        "file_read_failed": "The file could not be read.",
+        "file_too_large": "The CSV file must be 5 MB or smaller.",
+        "too_many_rows": "The CSV file may contain up to 5,000 rows.",
+        "unsupported_file": "Choose a CSV file encoded in UTF-8 or Windows-1250.",
+        "invalid_file": "The CSV file could not be processed.",
+        "empty_file": "The CSV file is empty.",
+        "missing_column_first_name": "The first name column is missing.",
+        "missing_column_last_name": "The last name column is missing.",
+        "already_committed": "This import has already been completed.",
+        "import_expired": "This preview has expired. Preview the file again to import it."
+      }
+    },
+    "enquiryForm": {
+      "title": "Enquiry form",
+      "clinics": "Clinics",
+      "noClinics": "No clinics assigned.",
+      "publicLink": "Public link",
+      "embedCode": "Embed code",
+      "embedTitle": "Enquiry form",
+      "copyLink": "Copy link",
+      "copyCode": "Copy code",
+      "copied": "Copied",
+      "copyFailed": "Copy failed. You can select and copy the text directly.",
+      "disabled": "This clinic’s public enquiry form is disabled.",
+      "regenerate": "Generate a new link",
+      "regenerateWarning": "The old link and existing embeds will stop working immediately."
+    }
+  },
+  "publicEnquiry": {
+    "title": "Send an enquiry",
+    "fullName": "Full name",
+    "phone": "Phone",
+    "email": "Email",
+    "message": "Message",
+    "preferredContactTime": "Preferred contact time",
+    "contactHint": "Enter a phone number or email address so the clinic can reply.",
+    "marketingConsent": "Marketing consent",
+    "marketingDescription": "I agree to receive marketing messages from the clinic. This is optional and I can withdraw my consent at any time.",
+    "send": "Send enquiry",
+    "thanks": "Thank you. We received your enquiry.",
+    "validation": {
+      "fullNameRequired": "Enter your name.",
+      "messageRequired": "Enter a message.",
+      "contactRequired": "Enter a phone number or email address.",
+      "emailInvalid": "Enter a valid email address."
+    },
+    "errors": {
+      "unavailable": "This form is not available.",
+      "invalidPhone": "Enter a valid phone number.",
+      "invalidInput": "Check the values you entered.",
+      "requestFailed": "Something went wrong. Please try again."
+    }
+  },
+  "staff": {
+    "title": "Staff",
+    "fullName": "Full name",
+    "roles": "Roles",
+    "clinics": "Clinics",
+    "status": "Status",
+    "active": "Active",
+    "inactive": "Inactive",
+    "edit": "Edit",
+    "editTitle": "Edit staff member",
+    "empty": "No staff members.",
+    "pendingInvitations": "Pending invitations",
+    "noInvitations": "No pending invitations.",
+    "invite": "Invite",
+    "inviteTitle": "Invite a staff member",
+    "revoke": "Revoke",
+    "link": "Invitation link",
+    "oneTimeLink": "This link is shown only once. Copy it now to share with the invitee.",
+    "expiresAt": "Expires {{date}}",
+    "copy": "Copy link",
+    "copied": "Link copied",
+    "copyFailed": "Could not copy the link. Select and copy it manually.",
+    "done": "Done",
+    "validation": {
+      "nameRequired": "Enter the staff member’s full name.",
+      "rolesRequired": "Select at least one role.",
+      "clinicsRequired": "Select at least one clinic."
+    },
+    "errors": {
+      "last_manager": "The organization must have at least one active clinic manager.",
+      "already_staff": "A staff member already uses this email address in the organization.",
+      "already_invited": "There is already a pending invitation for this email address."
+    }
+  },
+  "invitation": {
+    "title": "Accept invitation",
+    "organization": "You have been invited to join {{organization}}.",
+    "existingAccount": "You already have an account. Enter your current password.",
+    "newPassword": "New password",
+    "confirmPassword": "Confirm password",
+    "passwordLength": "Use at least 12 characters.",
+    "passwordMismatch": "Passwords must match.",
+    "accepted": "Invitation accepted. Sign in to get started.",
+    "errors": {
+      "not_found": "This invitation link is invalid.",
+      "invitation_expired": "This invitation has expired.",
+      "invitation_used": "This invitation has already been used.",
+      "invitation_revoked": "This invitation has been revoked.",
+      "codeRequired": "Enter the code from your authenticator app.",
+      "account_exists_retry": "An account now exists for this email address. Enter its current password."
+    }
+  }
+}

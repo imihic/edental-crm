@@ -1,0 +1,2 @@
+backend/app/people/core/testdata/*.csv -text
+*.sh text eol=lf
